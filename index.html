@@ -8,63 +8,91 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    /* Estilos para o menu hamburguer */
-    .navbar-burger {
-      background-color: transparent; /* Garantir que o fundo fique transparente */
-      border: none; /* Remove bordas indesejadas */
-    }
+    /* Estilos para o menu hambúrguer */
+.navbar-burger {
+  background-color: transparent; /* Fundo transparente */
+  border: none; /* Remove bordas */
+  cursor: pointer;
+}
 
-    .navbar-burger span {
-      background-color: #fff; /* Cor das barras do hamburguer */
-    }
+.navbar-burger span {
+  display: block;
+  width: 30px; /* Largura das barras */
+  height: 3px; /* Altura das barras */
+  margin: 5px 0; /* Espaço entre as barras */
+  background-color: #fff; /* Cor padrão das barras */
+  transition: background-color 0.3s ease; /* Transição de cor */
+}
 
-    .navbar-burger.is-active span {
-      background-color: #00d1b2; /* Cor das barras do hamburguer quando ativo */
-    }
+.navbar-burger.is-active span {
+  background-color: #00d1b2; /* Cor ativa das barras */
+}
 
-    .navbar-menu {
-      background-color: #1a1a1a; /* Cor de fundo escura quando o menu é exibido */
-    }
+/* Estilos do menu quando ativado */
+.navbar-menu {
+  background-color: #1a1a1a; /* Fundo escuro */
+  padding: 10px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+}
 
-    /* Estilos para o container de áudio */
-    .audio-container {
-      width: 400px; /* Tamanho mais largo para o box de música */
-      height: 110px;
-      border-radius: 8px;
-      background-color:#1a1a1a;
-      padding: 2px;
-    }
-    .audio-container .title {
-      font-size: 14px;
-    }
-    .audio-container .subtitle {
-      font-size: 12px;
-      color: #888;
-    }
-    /* Barra de progresso */
+/* Estilos para o container de áudio */
+.audio-container {
+  width: 400px; /* Largura do box de áudio */
+  height: 110px; /* Altura do box */
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #1a1a1a; /* Fundo escuro */
+  padding: 15px; /* Espaçamento interno */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.audio-container .title {
+  font-size: 14px; /* Tamanho da fonte do título */
+  font-weight: bold;
+  color: #fff; /* Cor do texto */
+}
+
+.audio-container .subtitle {
+  font-size: 12px; /* Tamanho da fonte do subtítulo */
+  color: #888; /* Cor cinza */
+}
+
+/* Barra de progresso */
 .progress-bar {
-  width: 100%; /* 100% do container */
-  height: 7px; /* Altura */
+  width: 100%; /* Barra ocupa toda a largura do container */
+  height: 7px; /* Altura da barra */
   background-color: #ddd; /* Fundo cinza */
-  border-radius: 4px; /* Borda arredondada */
-  overflow: hidden; /* Para evitar overflow do preenchimento */
+  border-radius: 4px; /* Bordas arredondadas */
+  overflow: hidden; /* Esconde overflow */
 }
 
 .progress-bar span {
   display: block;
   height: 100%; /* Preenche toda a altura */
-  background-color: #00d1b2; /* Cor da barra de progresso */
-  width: 0%; /* Inicialmente 0% */
-  transition: width 0.2s ease; /* Animação suave */
+  background-color: #00d1b2; /* Cor da barra preenchida */
+  width: 0%; /* Começa vazio */
+  transition: width 0.2s ease; /* Animação suave no preenchimento */
 }
+
+/* Responsividade para dispositivos menores */
 @media screen and (max-width: 768px) {
   .carousel-images img {
-    object-fit: contain; /* Mostra a imagem inteira sem cortar */
-    max-width: 100%;
-    max-height: 100%;
+    object-fit: contain; /* Ajusta a imagem sem cortar */
+    max-width: 100%; /* Limita largura */
+    max-height: 100%; /* Limita altura */
+  }
+
+  .audio-container {
+    width: 100%; /* Ajusta para a largura total da tela */
+    padding: 10px; /* Reduz padding */
+  }
+
+  .navbar-menu {
+    padding: 5px; /* Reduz padding do menu */
   }
 }
-    
+
   </style>
 </head>
 <body>
