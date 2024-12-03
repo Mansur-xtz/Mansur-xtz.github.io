@@ -125,4 +125,17 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.classList.toggle('is-active');
   });
 });
-
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});

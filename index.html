@@ -57,7 +57,13 @@
   width: 0%; /* Inicialmente 0% */
   transition: width 0.2s ease; /* Animação suave */
 }
-
+@media screen and (max-width: 768px) {
+  .carousel-images img {
+    object-fit: contain; /* Mostra a imagem inteira sem cortar */
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
     
   </style>
 </head>
