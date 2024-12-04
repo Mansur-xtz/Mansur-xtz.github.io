@@ -88,14 +88,14 @@ body {
 .carousel-images img {
   width: 100%; /* As imagens irão se ajustar à largura do contêiner */
   height: 100%; /* As imagens irão se ajustar à altura do contêiner */
-  object-fit:contain; /* Faz com que as imagens cubram o espaço sem distorção */
+  object-fit: contain; /* Faz com que as imagens cubram o espaço sem distorção */
   max-width: 100%;
   max-height: 100%; /* Garante que as imagens não ultrapassem o limite da box */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra nas imagens */
 }
 
-/* Botões */
+/* Botões do carrossel */
 button {
   margin: 0 10px;
   border-radius: 5px;
@@ -123,16 +123,17 @@ button:hover {
   color: #2c2c2c; /* Cor do texto ao passar o mouse */
 }
 
+/* Media Query para dispositivos móveis */
 @media (max-width: 768px) {
   .navbar {
-      flex-direction: column; /* Torna a navbar vertical */
-      align-items: center; /* Centraliza os itens */
+    flex-direction: column; /* Torna a navbar vertical */
+    align-items: center; /* Centraliza os itens */
   }
+  
   .navbar .navbar-item {
-      padding: 10px; /* Espaçamento maior entre os itens */
-      text-align: center;
+    padding: 10px; /* Espaçamento maior entre os itens */
+    text-align: center;
   }
-}
 
   .carousel-container {
     padding: 15px;
@@ -143,7 +144,7 @@ button:hover {
   button {
     padding: 8px 15px;
   }
-
+}
 
 /* Box para "Favorite Moments" */
 .box {
