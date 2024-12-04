@@ -66,7 +66,7 @@ function addPhotos() {
 }
 
 // Contador de dias e tempo
-const startDate = new Date("2023-12-25"); // Data inicial do relacionamento
+const startDate = new Date( "2023-12-25T23:07:00"); // Data inicial do relacionamento
 
 function updateTimeCounter() {
   const currentDate = new Date(); // Data atual
